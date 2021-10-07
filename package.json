@@ -1,0 +1,27 @@
+{
+  "name": "@beacon/client-api",
+  "version": "0.0.15",
+  "license": "MIT",
+  "module": "dist/index.js",
+  "dependencies": {
+    "webpack": "^5.56.0"
+  },
+  "scripts": {
+    "serve": "NODE_ENV=development webpack --config webpack.development.config.js",
+    "build": "NODE_ENV=production webpack --config webpack.production.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-env": "^1.6.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "express": "^4.17.1",
+    "friendly-errors-webpack-plugin": "^1.7.0",
+    "prettier": "^2.4.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.1"
+  }
+}
