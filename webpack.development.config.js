@@ -1,16 +1,16 @@
 const Path = require('path');
 const webpackBase = require('./webpack.config.js');
-const merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 module.exports = merge(webpackBase, {
   mode: 'development',
   target: 'web',
   devServer: {
     static: {
-      directory: Paht.join(__dirname, 'dev/public'),
+      directory: Path.join(__dirname, 'dev/public'),
     },
+    magicHtml: true,
     compress: true,
     port: 9000,
-
   },
 });

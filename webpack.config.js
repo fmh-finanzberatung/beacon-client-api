@@ -10,5 +10,6 @@ module.exports = {
     path: Path.resolve(__dirname, 'dist'),
     filename: 'index.js',
     libraryTarget: 'module',
-  },
+    publicPath: '/' 
+    },
 };
