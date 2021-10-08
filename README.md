@@ -4,7 +4,7 @@
 
 add this line to your package.json devDependencies:
 
-"beaconClientApi": "https://github.com/fmh-finanzberatung/beacon.git#v0.0.2"
+"beaconClientApi": "https://github.com/fmh-finanzberatung/beacon.git#v0.0.3"
 
 Please check for the latest updates. This is not an npm registry entry.
 
