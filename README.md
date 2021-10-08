@@ -33,4 +33,5 @@ The following properties should get assigned when the logError function is being
   customErrorKey: "an error key for classifying the error situation like 'georg-form-error' or 'kian-login-failure",
 });```
 
-
+None of these Properties is mandatory. So, you're free to deviate from the
+proposals above.

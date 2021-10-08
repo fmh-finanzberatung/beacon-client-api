@@ -104,9 +104,7 @@ export default function logAccess() {
 
   const pageOpenedAt = Date.now();
   const apiPath = '/api/public/beacons';
-  const beaconUrl = document.location.hostname.match(/devel|localhost/)
-    ? 'http://localhost:3006' + apiPath
-    : 'https://beacon.fmh.de' + apiPath;
+  const beaconUrl =`${process.env.API_HOST}${process.env.ACCESS_LOG_URI}`; 
 
   const infoData = info(pageOpenedAt);
   sendSignal(beaconUrl, infoData);

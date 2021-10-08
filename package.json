@@ -8,10 +8,14 @@
   },
   "scripts": {
     "serve": "NODE_ENV=development webpack serve --config webpack.development.config.js",
-    "build": "NODE_ENV=production webpack --config webpack.production.config.js"
+    "build": "NODE_ENV=production webpack --config webpack.production.config.js",
+    "test": "yarn test:log-access && yarn test:log-errors",
+    "test:log-access": "NODE_ENV=test node test/log-access.test.mjs",
+    "test:log-errors": "NODE_ENV=test node test/log-erors.test.mjs"
   },
   "devDependencies": {
     "@babel/core": "^7.15.8",
+    "axios": "^0.22.0",
     "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-preset-env": "^1.6.0",
@@ -20,8 +24,13 @@
     "eslint-plugin-prettier": "^4.0.0",
     "express": "^4.17.1",
     "friendly-errors-webpack-plugin": "^1.7.0",
+    "http-terminator": "^3.0.3",
+    "mk-log": "https://github.com/mkastner/mk-log.git#v0.0.13",
+    "nodemon": "^2.0.13",
     "prettier": "^2.4.1",
+    "tape": "^5.3.1",
     "webpack-cli": "^4.8.0",
-    "webpack-dev-server": "^4.3.1"
+    "webpack-dev-server": "^4.3.1",
+    "webpack-merge": "^5.8.0"
   }
 }

@@ -1,5 +1,4 @@
 export default function logError(error) {
-  console.log('error', error);
 
   if (!error || !Object.keys(error).length) {
     console.warn(
@@ -8,15 +7,7 @@ export default function logError(error) {
   }
 
   const apiPath = '/api/public/errors';
-  //console.log('error', error);
-
-  console.log('apiPath', apiPath);
-
-  const beaconUrl = document.location.hostname.match(/devel|local/)
-    ? 'http://localhost:3006' + apiPath
-    : 'https://beacon.fmh.de' + apiPath;
-
-  console.log('logError beaconUrl:', beaconUrl);
+  const beaconUrl =`${process.env.API_HOST}${process.env.ERROR_LOG_URI}`; 
 
   const occuredAt = Date.now();
   const na = '-';
