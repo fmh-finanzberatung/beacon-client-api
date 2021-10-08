@@ -10,7 +10,7 @@ Please check for the latest updates. This is not an npm registry entry.
 
 ## Access logging
 
-import { logAcces } from 'beaconClientAPI';
+import { logAccess } from 'beaconClientAPI';
 
 invoke only once per page or router view instance:
 
